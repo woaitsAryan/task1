@@ -22,9 +22,10 @@ def calculate():
 
 @app.route("/<int:x>+<int:y>")
 def add(x,y):
-    answer = requests.get(f"http://127.0.0.1:8080/{x}+{y}")
+    temp = f"http://127.0.0.1:8080/{x}+{y}"
+    answer = requests.get(temp)
     if answer.status_code == 200:
-        return render_template("succcess.html", answer = answer.json())
+        return render_template("success.html", answer = answer.json())
     else:
         return render_template("success.html", answer = answer.status_code)
 
@@ -37,7 +38,7 @@ def subtract(x,y):
     else:
         return render_template("success.html", answer = answer.status_code)
 
-app.route("/<int:x>*<int:y>")
+@app.route("/<int:x>*<int:y>")
 def multiply(x,y):
     answer = requests.get(f"http://127.0.0.1:8081/{x}*{y}")
     if answer.status_code == 200:
