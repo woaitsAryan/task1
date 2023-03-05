@@ -1,26 +1,35 @@
-.center{
-    text-align: center;
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+align-items: center;
+background-color:white ;
 }
-main
-{
-    /* scroll horizontally as needed */
-    overflow-x: auto;
+.form1{
+    height: 79vh;
+    display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.form-group{
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
-    /* center contents */
-    text-align: center;
 }
 
-main .form-control
-{
-    /* center form controls */
-    display: inline-block;
-
-    /* override Bootstrap's 100% width for form controls */
-    width: auto;
+.btn1{
+    display:flex;
+    align-items: flex-end;
+    justify-content: center;
+   
+    
 }
-
-nav .navbar-brand
-{
-    /* size for brand */
-    font-size: xx-large;
+.btn-primary{
+    margin-left: 0.45rem;
+    margin-right: 0.45rem;
+    border-radius: 0.4rem;
+    
 }
